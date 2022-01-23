@@ -4,7 +4,7 @@
 
 # ABOUT
 
-PDBW project about creating an API
+DBW project about creating a lab managment API
 
 # SOFTWARE
 
