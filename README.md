@@ -1,4 +1,4 @@
-**DBW_project**
+**MyLAB**
 ===================================
 *by* VILALTA, Júlia; POSE, Iria; MADRID, Alejandro; SOLER, Xavier;
 
