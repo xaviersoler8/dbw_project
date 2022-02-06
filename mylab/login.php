@@ -19,7 +19,7 @@
   
 	  <!-- Icon -->
 	  <div class="fadeIn first">
-		<img src="/img/user.png" id="icon" alt="User Icon" />
+		<img src="img/user.png" id="icon" alt="User Icon" />
 	  </div>
   
 	  <!-- Login Form -->
@@ -29,10 +29,13 @@
 		<input type="submit" class="fadeIn fourth" value="Log In">
 	  </form>
   
-	  <!-- Remind Passowrd -->
-	  <div id="formFooter">
+	  <!-- Remind Passowrd & Register -->
+	<div id="formFooter">
 		<a class="underlineHover" href="#">Forgot Password?</a>
-	  </div>
+	</div>
+		<div id="formFooter">
+		<a class="underlineHover" href="register.php">Register</a>
+	</div>
   
 	</div>
   </div>
