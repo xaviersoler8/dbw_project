@@ -20,8 +20,24 @@ html, body {
 
 .nav-link:hover {
   color: #c0a8a1 !important;
+
 }
 
 .navbar-brand {
     color:aliceblue !important;
+
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+.main {
+  width: 100%;
+  padding-right: 2px;
+  padding-left: 2px;
+  margin-right: auto;
+  margin-left: auto;
 }
