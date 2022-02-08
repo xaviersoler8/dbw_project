@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+/*Cambiar formato a bonito*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-familiar: 'Poppins', sans-serif;
+  color: #222
+}
+.navbar {
+  padding: 8rem; /*Espacio entre el contenido del elemento y su borde*/
+  color: rgb(255, 255, 255);
+}
+.navbar-nav li {
+  padding-right: 20px;
+  color: rgb(255, 255, 255)!important;
+  
+}
+.nav-link {
+  font-size: 1.1em !important;
+
+}
+
+.nav-link:hover {
+  color: #c0a8a1 !important;
+}
+
+.navbar-collapse{
+    color:aliceblue !important;
+}
