@@ -1,0 +1,17 @@
+html, body {
+    height: 100% !important;
+    width: 100% !important;
+    font-familiar: 'Poppins', sans-serif !important;
+    color: #222 !important;
+  }
+.active-date {
+    background: #8a8989 !important;
+    color: #fff !important; }
+
+.main {
+  width: 100% !important;
+  padding-right: 2px !important;
+  padding-left: 2px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
