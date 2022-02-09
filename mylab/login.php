@@ -1,3 +1,14 @@
+<?php
+
+	session_start();
+	# Si existe una sesion iniciada, entra en ella
+	if(isset($_SESSION['user'])){
+		header("location: experiments.php");
+	}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,18 +26,16 @@
 <body>
 <div class="wrapper fadeInDown">
 	<div id="formContent">
-	  <!-- Tabs Titles -->
-  
 	  <!-- Icon -->
 	  <div class="fadeIn first">
 		<img src="img/user.png" id="icon" alt="User Icon" />
 	  </div>
   
 	  <!-- Login Form -->
-	  <form>
-		<input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-		<input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-		<input type="submit" class="fadeIn fourth" value="Log In">
+	  <form method="post" action="php/login_be.php">
+		<input type="text" id="login" class="fadeIn second" name="email" placeholder="login">
+		<input type="password" id= "login" class="fadeIn third" name="pass" placeholder="password">
+		<input type="submit" class="fadeIn fourth" value="Log In" name="login">
 	  </form>
   
 	  <!-- Remind Passowrd & Register -->

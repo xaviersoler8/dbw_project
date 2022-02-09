@@ -23,14 +23,13 @@
 	  </div>
   
 	  <!-- Register Form -->
-	  <form action="php/register_user_be.php" method="POST">
-		<input type="text" id="login" class="fadeIn second" name="login" placeholder="Name and Surname" name = "complete_name">
-		<input type="text" id="login" class="fadeIn second" name="login" placeholder="Email" name = "email">
-		<input type="text" id="login" class="fadeIn second" name="login" placeholder="User" name="user">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password" name="pass">
-		<input type="submit" class="fadeIn fourth" value="Register">
+	  <form method="post" action="php/register_user_be.php">
+		<input type="text" id="login" class="fadeIn second" placeholder="Name and Surname" name = "complete_name">
+		<input type="text" id="login" class="fadeIn second" placeholder="Email" name = "email">
+		<input type="text" id="login" class="fadeIn second"  placeholder="User" name="user">
+        <input type="password" id="password" class="fadeIn third" placeholder="Password" name="pass">
+		<input type="submit" class="fadeIn fourth" value="Register" name = "register">
 	  </form>
-  
 	</div>
   </div>
 </body>
