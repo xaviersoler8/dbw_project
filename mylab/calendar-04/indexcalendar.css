@@ -15,3 +15,8 @@ html, body {
   margin-right: auto !important;
   margin-left: auto !important;
 }
+
+.events-container {
+  background: #222 !important;
+  color: #222 !important; }
+
