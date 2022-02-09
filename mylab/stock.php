@@ -35,7 +35,7 @@ if(!isset($_SESSION['user'])){
 
 <!--HEADER--> 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #6c757d;">
     <a class="navbar-brand" ><img width=50 src ="img/logo4.png"> MyLab</a>
     <div class="navbar-collapse" id="navbarSupportedContent">
       <!-- experiments -->
