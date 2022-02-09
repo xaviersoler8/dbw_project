@@ -20,3 +20,27 @@ html, body {
   background: #222 !important;
   color: #222 !important; }
 
+  .navbar-nav li {
+    padding-right: 20px;
+    
+  }
+  .nav-link {
+    font-size: 1.1em !important;
+    color:aliceblue !important;
+  
+  }
+  
+  .nav-link:hover {
+    color: #c0a8a1 !important;
+  
+  }
+  
+  .navbar-brand {
+      color:aliceblue !important;
+  
+  }
+  
+  .navbar-collapse {
+    display: flex;
+    flex-wrap: nowrap;
+  }
