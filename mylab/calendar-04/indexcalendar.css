@@ -1,0 +1,46 @@
+html, body {
+    height: 100% !important;
+    width: 100% !important;
+    font-familiar: 'Poppins', sans-serif !important;
+    color: #222 !important;
+  }
+.active-date {
+    background: #8a8989 !important;
+    color: #fff !important; }
+
+.main {
+  width: 100% !important;
+  padding-right: 2px !important;
+  padding-left: 2px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.events-container {
+  background: #222 !important;
+  color: #222 !important; }
+
+  .navbar-nav li {
+    padding-right: 20px;
+    
+  }
+  .nav-link {
+    font-size: 1.1em !important;
+    color:aliceblue !important;
+  
+  }
+  
+  .nav-link:hover {
+    color: #c0a8a1 !important;
+  
+  }
+  
+  .navbar-brand {
+      color:aliceblue !important;
+  
+  }
+  
+  .navbar-collapse {
+    display: flex;
+    flex-wrap: nowrap;
+  }
