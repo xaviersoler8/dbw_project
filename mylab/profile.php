@@ -1,3 +1,21 @@
+<?php
+
+        session_start();
+
+        if(!isset($_SESSION['user'])){
+                echo '
+                <script>
+                        alert("Please, connect session");
+                        window.location = "login.php";
+                </script>
+                ';
+                session_destroy();
+                die();
+        }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +27,9 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="experiments.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 
 </head>
 
@@ -22,31 +43,31 @@
       <!-- experiments -->
       <div class="col-sm-2 col-xs-12 col-md-1">
         <li class="nav-item active">
-          <a class="nav-link" href="experiments.html"><img width=30 src ="img/exp_icon.png"></a>
+          <a class="nav-link" href="experiments.php"><img width=30 src ="img/exp_icon.png"></a>
         </li>
       </div>
       <!-- stock -->
       <div class="col-sm-2 col-xs-12 col-md-1">
         <li class="nav-item">
-          <a class="nav-link" href="stock.html"><img width=30 src ="img/stock_icon.png"></a>
+          <a class="nav-link" href="stock.php"><img width=30 src ="img/stock_icon.png"></a>
         </li>
       </div>
       <!-- calendar -->
       <div class="col-sm-2 col-xs-12 col-md-1">
         <li class="nav-item">
-            <a class="nav-link" href="calendar-04/calendar.html"><img width=30 src ="img/cal_icon.png"></a>
+            <a class="nav-link" href="calendar-04/calendar.php"><img width=30 src ="img/cal_icon.png"></a>
           </li>
       </div>
       <!-- chat -->
       <div class="col-sm-2 col-xs-12 col-md-1">
         <li class="nav-item">
-          <a class="nav-link" href="chat.html"><img width=30 src ="img/chat_icon.png"></a>
+          <a class="nav-link" href="chat.php"><img width=30 src ="img/chat_icon.png"></a>
         </li>
       </div>
       <!-- profile -->
       <div class="col-sm-2 col-xs-12 col-md-1">
         <li class="nav-item">
-          <a class="nav-link" href="profile.html"><img width=30 src ="img/prof_icon.png"></a>
+          <a class="nav-link" href="profile.php"><img width=30 src ="img/prof_icon.png"></a>
         </li>
       </div>
     </div>
@@ -62,7 +83,7 @@
 		<img src="img/user.png" id="icon" alt="User Icon" />
 	  </div>
       <br>
-      <!-- Info -->
+      <!-- Info 
       <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
@@ -83,13 +104,25 @@
           <p class="mb-1">juliavilmor@gmail.com</p>
         </a>
       </div>
-      <br>
+      <br>  -->
 
 	  <!-- Log out Form -->
-	  <form>
-		<input type="submit" class="fadeIn fourth" value="Log Out">
+    <!--
+	  <buttom class="navbar-toggler" type="button" data-toggle = "collapse" data-target = "#navbarResponsive">
+        <a href="php/close_session_be.php"> Log Out </a>
+    </buttom>
+      -->
+
+    <form method="post" action="php/close_session_be.php">
+		  <input type="submit" class="fadeIn fourth" value="Log Out" name="login">
 	  </form>
-  
+
 	</div>
   </div>
+
+
+
+
 </body>
+
+  
