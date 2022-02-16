@@ -1,6 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `login_register_db` /*!40100 DEFAULT CHARACTER SET utf32 COLLATE utf32_spanish_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `login_register_db`;
--- MySQL dump 10.13  Distrib 8.0.25, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.28, for Linux (x86_64)
 --
 -- Host: 127.0.0.1    Database: login_register_db
 -- ------------------------------------------------------
@@ -18,6 +16,85 @@ USE `login_register_db`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `protocols`
+--
+
+DROP TABLE IF EXISTS `protocols`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `protocols` (
+  `id_exp` int NOT NULL AUTO_INCREMENT,
+  `type` varchar(30) COLLATE utf32_spanish_ci NOT NULL,
+  `mastermix` int DEFAULT NULL,
+  `oligos` int DEFAULT NULL,
+  `miliQ` int DEFAULT NULL,
+  `template` int DEFAULT NULL,
+  PRIMARY KEY (`id_exp`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf32 COLLATE=utf32_spanish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `protocols`
+--
+
+LOCK TABLES `protocols` WRITE;
+/*!40000 ALTER TABLE `protocols` DISABLE KEYS */;
+INSERT INTO `protocols` VALUES (3,'PCR',25,2,22,1);
+/*!40000 ALTER TABLE `protocols` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `prueba`
+--
+
+DROP TABLE IF EXISTS `prueba`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `prueba` (
+  `id_prueba` int NOT NULL AUTO_INCREMENT,
+  `type` varchar(45) COLLATE utf32_spanish_ci DEFAULT NULL,
+  `amount` int DEFAULT NULL,
+  PRIMARY KEY (`id_prueba`)
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf32 COLLATE=utf32_spanish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `prueba`
+--
+
+LOCK TABLES `prueba` WRITE;
+/*!40000 ALTER TABLE `prueba` DISABLE KEYS */;
+INSERT INTO `prueba` VALUES (32,'PCR',30),(34,'0',11),(39,'PCR',30),(40,'PCR',30),(41,'PCR',30),(42,'PCR',30),(43,'PCR',30),(44,'PCR',30),(50,'PCR',30),(51,'PCR',30),(52,'PCR',30),(53,'PCR',30),(54,'PCR',30),(55,'PCR',30),(56,'PCR',30),(57,'PCR',30),(58,'PCR',30),(59,'PCR',30),(60,'PCR',30),(61,'PCR',30),(62,'PCR',30),(63,'PCR',30),(64,'PCR',30),(65,'PCR',30),(66,'PCR',30),(67,'PCR',10),(68,'PCR',10),(69,'PCR',10),(70,'PCR',2),(71,'PCR',2),(72,'PCR',2);
+/*!40000 ALTER TABLE `prueba` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reactives`
+--
+
+DROP TABLE IF EXISTS `reactives`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reactives` (
+  `id_reactive` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) COLLATE utf32_spanish_ci NOT NULL,
+  `amount` int DEFAULT NULL,
+  `threshold` int NOT NULL,
+  PRIMARY KEY (`id_reactive`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf32 COLLATE=utf32_spanish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reactives`
+--
+
+LOCK TABLES `reactives` WRITE;
+/*!40000 ALTER TABLE `reactives` DISABLE KEYS */;
+INSERT INTO `reactives` VALUES (1,'mastermix',78,50),(2,'oligos',20,10),(3,'miliQ',890,200),(4,'template',14,5);
+/*!40000 ALTER TABLE `reactives` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -27,8 +104,8 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `complete_name` varchar(50) CHARACTER SET utf32 COLLATE utf32_spanish_ci NOT NULL,
-  `email` varchar(50) COLLATE utf32_spanish_ci NOT NULL,
-  `user` varchar(50) COLLATE utf32_spanish_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf32 COLLATE utf32_spanish_ci NOT NULL,
+  `user` varchar(50) CHARACTER SET utf32 COLLATE utf32_spanish_ci NOT NULL,
   `pass` varchar(50) CHARACTER SET utf32 COLLATE utf32_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf32 COLLATE=utf32_spanish_ci;
@@ -53,4 +130,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-09 13:31:05
+-- Dump completed on 2022-02-16 13:51:44
