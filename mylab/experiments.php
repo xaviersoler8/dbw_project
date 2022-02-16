@@ -32,7 +32,8 @@
 </head>
 
 <body>
-
+  
+ 
 <!--HEADER--> 
 
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #6c757d;">
@@ -75,26 +76,29 @@
 <main role="main" class="container">
   <br>
   <p>Type of experiment:</p>
+  <form id="experiments" action="connection.php" method="POST">
+    <label>nombre experimento</label>
+    <select name="typeref">
+      <option value="0">Seleccione</option>
+    
+      <?php
+        $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+        $experimentos="SELECT * FROM protocols";
+        $resultado=mysqli_query($connection,$experimentos);
+        while ($valores = mysqli_fetch_array($resultado)) {
+          echo '<option value="'.$valores[type].'">'.$valores[type].'</option>';
+        }
+      ?>
+      </select><br><br>
+ 
+      <p>Number of experiments:</p>
+      <label for="tentacles">Number of experiments</label>
 
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Experiments
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">DNA extraction</a>
-        <a class="dropdown-item" href="#">PCR</a>
-        <a class="dropdown-item" href="#">Western Blot</a>
-        <a class="dropdown-item" href="#">ELISA</a>
-        <a class="dropdown-item" href="#">Electrophoresis</a>
-        <a class="dropdown-item" href="#">Protein precipitation</a>
-      </div>
-    </div>
-  <br>
+        <input type="number" id="cantidad" name="tentacles" min="1" max="100">
+      
+      <input type="submit" class="fadeIn fourth" value="Log In" name="submit">
+  </form>
 
-  <p>Number of experiments:</p>
-    <div class="quantity buttons_added">
-    <br><input type="number" step="1" min="1" max="100" name="quantity" value="1" title="Qty" class="input-text qty text" size="6" pattern="" inputmode="">
-    </div>
 
   <br>
   <p>User:</p>
@@ -111,6 +115,14 @@
         <a class="dropdown-item" href="#">Antonia</a>
         <a class="dropdown-item" href="#">Demetrio</a>
         <a class="dropdown-item" href="#">Josefina</a>
+        <?php
+        include("connection.php");
+        $experimentos="SELECT * FROM experiments";
+        $resultado=mysqli_query($connection,$experimentos);
+        while ($valores = mysqli_fetch_array($resultado)) {
+          echo '<a class="dropdown-item" href="#"><option value="'.$valores[user].'">'.$valores[user].'</option></a>';
+        }
+        ?>
       </div>
     </div>
 
