@@ -77,21 +77,47 @@
   <br>
   <p>Type of experiment:</p>
   <form id="experiments" action="connection.php" method="POST">
-    <label>nombre experimento</label>
+    <!-- <label>nombre experimento</label> -->
     <select name="typeref">
-      <option value="0">Seleccione</option>
+      <option value="0">Select</option>
     
       <?php
         $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
         $experimentos="SELECT * FROM protocols";
         $resultado=mysqli_query($connection,$experimentos);
+        $my_array = array();
         while ($valores = mysqli_fetch_array($resultado)) {
-          echo '<option value="'.$valores[type].'">'.$valores[type].'</option>';
+          
+          if (in_array($valores[type], $my_array)) {
+            
+          }
+          else {
+            echo '<option value="'.$valores[type].'">'.$valores[type].'</option>';
+          };
+
+          array_push($my_array, $valores[type]);
+          
         }
       ?>
-      </select><br><br>
+    </select><br><br>
  
-      <p>Number of experiments:</p>
+      
+      <label>user</label>
+      <select name="userref">
+      <option value="0">User</option>
+    
+      <?php
+        $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+        $experimentos="SELECT user FROM users";
+        $resultado=mysqli_query($connection,$experimentos);
+        while ($valores = mysqli_fetch_array($resultado)) {
+          
+          echo '<option value="'.$valores[user].'">'.$valores[user].'</option>';
+        }
+      ?>
+    </select><br><br>
+
+    <p>Number of experiments:</p>
       <label for="tentacles">Number of experiments</label>
 
         <input type="number" id="cantidad" name="tentacles" min="1" max="100">
