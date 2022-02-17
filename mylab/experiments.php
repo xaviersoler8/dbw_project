@@ -76,7 +76,7 @@
 <main role="main" class="container">
   <br>
   <p>Type of experiment:</p>
-  <form id="experiments" action="connection.php" method="POST">
+  <form id="experiments" action="experiments_out.php" method="POST">
     <!-- <label>nombre experimento</label> -->
     <select name="typeref" class="btn btn-secondary dropdown-toggle">
       <option value="0">Select</option>
