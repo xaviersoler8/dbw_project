@@ -80,8 +80,8 @@
 					<h2 class="heading-section">MyLab's Calendar</h2>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12">
+			<div class="row justify-content-center">
+				<div class="col-md-3 text-center mb-5">
 				    <div class="calendar-container">
 				      <div class="calendar"> 
 				        <div class="year-header"> 
