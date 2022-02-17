@@ -15,8 +15,6 @@ $x=mysqli_query($connection,$valor_restar);
 $row = mysqli_fetch_assoc($x);
 echo $row[steps];
 
-echo "The amount of the reactive ... is: ";
-echo $row[$key]*$amounnt;
 
 foreach (array_keys($row) as $key) {
 
