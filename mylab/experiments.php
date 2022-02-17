@@ -78,7 +78,7 @@
   <p>Type of experiment:</p>
   <form id="experiments" action="connection.php" method="POST">
     <!-- <label>nombre experimento</label> -->
-    <select name="typeref">
+    <select name="typeref" class="btn btn-secondary dropdown-toggle">
       <option value="0">Select</option>
     
       <?php
@@ -101,9 +101,9 @@
       ?>
     </select><br><br>
  
-      
-      <label>user</label>
-      <select name="userref">
+      <p>User:</p>
+      <!-- <label>User</label> -->
+      <select name="userref" class="btn btn-secondary dropdown-toggle">
       <option value="0">User</option>
     
       <?php
@@ -118,42 +118,13 @@
     </select><br><br>
 
     <p>Number of experiments:</p>
-      <label for="tentacles">Number of experiments</label>
+      <!-- <label for="tentacles">Number of experiments</label> -->
 
         <input type="number" id="cantidad" name="tentacles" min="1" max="100">
-      
-      <input type="submit" class="fadeIn fourth" value="Log In" name="submit">
-  </form>
-
-
-  <br>
-  <p>User:</p>
-
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        User
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Xavi</a>
-        <a class="dropdown-item" href="#">Iria</a>
-        <a class="dropdown-item" href="#">Alajuela</a>
-        <a class="dropdown-item" href="#">Júlia</a>
-        <a class="dropdown-item" href="#">Antonia</a>
-        <a class="dropdown-item" href="#">Demetrio</a>
-        <a class="dropdown-item" href="#">Josefina</a>
-        <?php
-        include("connection.php");
-        $experimentos="SELECT * FROM experiments";
-        $resultado=mysqli_query($connection,$experimentos);
-        while ($valores = mysqli_fetch_array($resultado)) {
-          echo '<a class="dropdown-item" href="#"><option value="'.$valores[user].'">'.$valores[user].'</option></a>';
-        }
-        ?>
-      </div>
-    </div>
-
-  <br>
-  <p>Do you want to write the protocol in a pdf file?</p>
+        <br>
+        <br>
+        <br>
+        <p>Do you want to write the protocol in a pdf file?</p>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
       <label class="form-check-label" for="inlineRadio1">Yes</label>
@@ -162,13 +133,14 @@
       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
       <label class="form-check-label" for="inlineRadio2">No</label>
     </div>
+    <br>
+    <br>
+    <br>
+      
+      <input type="submit" class="fadeIn fourth btn btn-dark"" value="Submit" name="submit">
+  </form>
 
-  <br>
-  <br>
-  <br>
 
-  <!--SUBMIT-->
-  <button type="button" class="btn btn-dark">Submit</button>
 
 </main>
 
