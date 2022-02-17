@@ -81,7 +81,7 @@
 				</div>
 			</div>
 			<div class="row justify-content-center">
-				<div class="col-md-3 text-center mb-5">
+				<div class="col-md-7 text-center mb-5">
 				    <div class="calendar-container">
 				      <div class="calendar"> 
 				        <div class="year-header"> 
@@ -130,6 +130,8 @@
 			</div>
 		</div>
 	</section>
+
+
 
 	<script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
