@@ -131,9 +131,18 @@
 		</div>
 	</section>
 
+	<!-- Register Form -->
+	<form method="post" action=".">
+		<input type="text" id="login" class="fadeIn second" placeholder="Event Name" name = "event_name">
+		<input type="text" id="login" class="fadeIn second" placeholder="Place" name = "place">
+		<input type="text" id="login" class="fadeIn second"  placeholder="Date" name="date">
+        <input type="text" id="password" class="fadeIn third" placeholder="Time" name="time">
+		<input type="submit" class="fadeIn fourth" value="Add to calendar" name = "add_cal">
+	  </form>
 
 
-	<script src="js/jquery.min.js"></script>
+
+<script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
