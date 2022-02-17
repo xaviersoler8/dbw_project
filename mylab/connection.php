@@ -15,6 +15,9 @@ $x=mysqli_query($connection,$valor_restar);
 $row = mysqli_fetch_assoc($x);
 echo $row[steps];
 
+echo "The amount of the reactive ... is: ";
+echo $row[$key]*$amounnt;
+
 foreach (array_keys($row) as $key) {
 
     $valor_before="SELECT amount FROM reactives WHERE name ='$key'";
@@ -23,8 +26,7 @@ foreach (array_keys($row) as $key) {
 
     $new_valor=($uwu['amount']-(($row[$key])*$amounnt));
 
-    echo "The amount of the reactive ... is: ";
-    echo ($row[$key])*$amounnt.<br>;
+
     
     $actualizar="UPDATE reactives SET amount=$new_valor WHERE name='$key'";
     $y=mysqli_query($connection,$actualizar);

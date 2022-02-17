@@ -8246,8 +8246,8 @@ h1, h2, h3, h4, h5,
 .calendar-container {
   position: relative;
   margin: 0 auto;
-  height: 100%;
-  width: 50%;
+  height: 700px;
+  width: 600px;
   background: #fff;
   font: 13px Helvetica, Arial, san-serif;
   display: inline-block;
