@@ -11,7 +11,7 @@ if(!isset($_SESSION['user'])){
         ';
         session_destroy();
         die();
-}
+}; 
 
 ?>
 
@@ -71,7 +71,6 @@ if(!isset($_SESSION['user'])){
     </div>
   </nav>
 
-
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
@@ -83,100 +82,32 @@ if(!isset($_SESSION['user'])){
         <div class="accordion-body">
           <dl>
             <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">LIQUID REACTIVES</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Alarms</th>
-                  </tr>
-                </thead>
+                
                 <tbody>
-                  <tr>
-                    <th scope="row">Etanol 70%</th>
-                    <td>08</td>
-                    <td>&#10060;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Etanol 99%</th>
-                    <td>80</td>
-                    <td>&#9989;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Isopropanol</th>
-                    <td>22</td>
-                    <td>&#10060;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Kappa Mix</th>
-                    <td>72</td>
-                    <td>&#9989;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Milli-Q Water</th>
-                    <td>78</td>
-                    <td>&#9989;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">RedSafe</th>
-                    <td>98</td>
-                    <td>&#9989;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Tris-HCl</th>
-                    <td>65</td>
-                    <td>&#9989;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Etanol 99%</th>
-                    <td>03</td>
-                    <td>&#10060;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Etanol 70%</th>
-                    <td>36</td>
-                    <td>&#9989;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Etanol 99%</th>
-                    <td>56</td>
-                    <td>&#9989;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Etanol 70%</th>
-                    <td>87</td>
-                    <td>&#9989;</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Etanol 99%</th>
-                    <td>56</td>
-                    <td>&#9989;</td>
-                  </tr>
-                </tbody>
-              </table>
-            <br>
-            <table class="table table-hover">
-            <thead>
+                
                 <tr>
-                <th scope="col">SOLID REACTIVES</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Alarms</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Agarose</th>
-                    <td>19</td>
-                    <td>&#9989;</td>
-                </tr>
-                <tr>
-                    <th scope="row">EDTA</th>
-                    <td>80</td>
-                    <td>&#9989;</td>
-                </tr>
-                <tr>
-                    <th scope="row">Tris Base</th>
-                    <td>07</td>
-                    <td>&#10060;</td>
+                    
+  <?php
+$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+$counter=1;
+while($counter <= 7){
+
+$reactivestable="SELECT * FROM reactives WHERE id_reactive='$counter'";
+$x=mysqli_query($connection,$reactivestable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){$amount=$row[$key]; echo "<td>";echo $amount; echo "</td>";};  
+    if ($count == 4){if($amount>$row[$key]){echo "<td>&#9989;</td></tr>";$count=0;}else{echo "<td>&#10060;</td></tr>"; $count=0;};};
+};};
+
+
+?>
+
                 </tr>
             </tbody>
             </table>
@@ -208,14 +139,7 @@ if(!isset($_SESSION['user'])){
                         <td>&#9989;</td>
                     </tr>
                     <tr>
-                        <th scope="row">Pippetes</th>
-                        <td>80</td>
-                        <td>&#9989;</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Gloves</th>
-                        <td>08</td>
-                        <td>&#9989;</td>
+
                     </tr>
                 </tbody>
             </table>
@@ -234,15 +158,6 @@ if(!isset($_SESSION['user'])){
                         <td>19</td>
                         <td>&#9989;</td>
                     </tr>
-                    <tr>
-                        <th scope="row">Bunsen burner</th>
-                        <td>03</td>
-                        <td>&#9989;</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Erlenmeyer flask</th>
-                        <td>02</td>
-                        <td>&#9989;</td>
                         </tr>
                 </tbody>
             </table>
@@ -260,16 +175,7 @@ if(!isset($_SESSION['user'])){
                             <th scope="row">Centrifuge</th>
                             <td>02</td>
                             <td>&#9989;</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Electrophoresis cuvette</th>
-                            <td>02</td>
-                            <td>&#9989;</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Thermoblock</th>
-                            <td>01</td>
-                            <td>&#9989;</td>
+                    
                         </tr>
                 </tbody>
             </table>
