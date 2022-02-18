@@ -73,3 +73,46 @@
 </nav>
 
 <!-- CHAT -->
+<form method="post" action="chat2.php">
+		<input type="text" id="chat" placeholder="Write here your message" name = "textchat">
+		<input type="submit" value="sendmd" name = "sendmd" href="chat2.php">
+	  </form>
+
+<?php
+include('chat2.php');
+
+
+$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+$sql = "SELECT * FROM xat";
+$result=mysqli_query($connection,$sql);
+$rowcount=mysqli_num_rows($result);
+
+
+    $textxat = trim($_POST['textchat']);
+    $counter=1;
+
+    while($counter<=$rowcount){
+
+$xatline="SELECT * FROM xat WHERE id_reactive='$counter'";
+
+$x=mysqli_query($connection,$xatline);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+  if ($count == 1){$numid=$row[$key];};
+    $count=$count+1;
+    if ($count == 2){echo $row[$key];};
+
+
+    };};
+$newid=$rowcount+1;
+$insertar="INSERT INTO xat(idxat,message) VALUES ('$numid','$newline')";
+$resultado=mysqli_query($connection,$insertar);
+
+    
+    
+
+    ?>
+
+
