@@ -132,14 +132,76 @@
 	</section>
 
 	<!-- Register Form -->
-	<form method="post" action=".">
-		<input type="text" id="login" class="fadeIn second" placeholder="Event Name" name = "event_name">
-		<input type="text" id="login" class="fadeIn second" placeholder="Place" name = "place">
-		<input type="text" id="login" class="fadeIn second"  placeholder="Date" name="date">
-        <input type="text" id="password" class="fadeIn third" placeholder="Time" name="time">
-		<input type="submit" class="fadeIn fourth" value="Add to calendar" name = "add_cal">
-	  </form>
+<!--EXPERIMENTS-->
+<main role="main" class="container">
+  <br>
+  <form id="experiments" action="calendar_out.php" method="POST">
+    <label>Month: </label>
+    <select name="typeref" class="btn btn-secondary dropdown-toggle">
+      <option value="0">Select</option>
+    
+      <?php
+        $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+        $experimentos="SELECT * FROM protocols";
+        $resultado=mysqli_query($connection,$experimentos);
+        $my_array = array();
+        while ($valores = mysqli_fetch_array($resultado)) {
+          
+          if (in_array($valores[type], $my_array)) {
+            
+          }
+          else {
+            echo '<option value="'.$valores[type].'">'.$valores[type].'</option>';
+          };
 
+          array_push($my_array, $valores[type]);
+          
+        }
+      ?>
+    </select>
+	
+	&nbsp&nbsp&nbsp&nbsp
+
+    <label>Day: </label>
+	<select name="typeref" class="btn btn-secondary dropdown-toggle">
+      <option value="0">Select</option>
+    
+      <?php
+        $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+        $experimentos="SELECT * FROM protocols";
+        $resultado=mysqli_query($connection,$experimentos);
+        $my_array = array();
+        while ($valores = mysqli_fetch_array($resultado)) {
+          
+          if (in_array($valores[type], $my_array)) {
+            
+          }
+          else {
+            echo '<option value="'.$valores[type].'">'.$valores[type].'</option>';
+          };
+
+          array_push($my_array, $valores[type]);
+          
+        }
+      ?>
+    </select><br><br>
+ 
+      
+	
+    <br>
+    <br>
+    <br>
+      
+      <input type="submit" class="fadeIn fourth btn btn-dark"" value="Submit" name="submit">
+  </form>
+
+
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 <script src="js/jquery.min.js"></script>
