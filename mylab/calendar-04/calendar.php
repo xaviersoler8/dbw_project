@@ -82,7 +82,7 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-7 text-center mb-5">
-				    <div class="calendar-container">
+				    <div> <!-- Here the class was:   class="calendar-container"-->
 				      <div class="calendar"> 
 				        <div class="year-header"> 
 				          <span class="left-button fa fa-chevron-left" id="prev"> </span> 
@@ -124,80 +124,112 @@
 				          </table>
 				        </div> 
 				      </div>
-				    
+			
+					  
 				  </div>
 				</div>
+
+			</div>
+			<div class="row justify-content-center">
+						<form id="calendar" action="calendar_out.php" method="POST">
+				<label>Month: </label>
+				<select name="month" class="btn btn-secondary dropdown-toggle">
+				<option value="0">Select</option>
+				
+				<?php
+					$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+					$month="SELECT * FROM month";
+					$resultado=mysqli_query($connection,$month);
+					$my_array = array();
+					while ($valores = mysqli_fetch_array($resultado)) {
+					
+					if (in_array($valores[month], $my_array)) {
+						
+					}
+					else {
+						echo '<option value="'.$valores[month].'">'.$valores[month].'</option>';
+					};
+
+					array_push($my_array, $valores[month]);
+					
+					}
+				?>
+				</select>
+				
+
+				<label>Day: </label>
+				<select name="day" class="btn btn-secondary dropdown-toggle">
+				<option value="0">Select</option>
+				
+				<?php
+					$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+					$day="SELECT * FROM day";
+					$resultado=mysqli_query($connection,$day);
+					$my_array = array();
+					while ($valores = mysqli_fetch_array($resultado)) {
+					
+					if (in_array($valores[day], $my_array)) {
+						
+					}
+					else {
+						echo '<option value="'.$valores[day].'">'.$valores[day].'</option>';
+					};
+
+					array_push($my_array, $valores[day]);
+					
+					}
+				?>
+				</select>
+
+
+				<label>Hour: </label>
+				<select name="hour" class="btn btn-secondary dropdown-toggle">
+				<option value="0">Select</option>
+				
+				<?php
+					$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+					$hour="SELECT * FROM hour";
+					$resultado=mysqli_query($connection,$hour);
+					$my_array = array();
+					while ($valores = mysqli_fetch_array($resultado)) {
+					
+					if (in_array($valores[hour], $my_array)) {
+						
+					}
+					else {
+						echo '<option value="'.$valores[hour].'">'.$valores[hour].'</option>';
+					};
+
+					array_push($my_array, $valores[hour]);
+					
+					}
+				?>
+				</select>
+
+
+				
+				<input type="text" id="login" class="fadeIn second" placeholder="Event name" name = "event">
+				<input type="text" id="login" class="fadeIn second" placeholder="Room" name = "room">
+				<input type="text" id="login" class="fadeIn second" placeholder="Description" name = "description">
+
+				<br>
+				<br>
+				<br>
+				
+				<input type="submit" class="fadeIn fourth btn btn-dark" value="Submit" name="submit">
+			</form>
 			</div>
 		</div>
 	</section>
 
 	<!-- Register Form -->
 <!--EXPERIMENTS-->
-<main role="main" class="container">
-  <br>
-  <form id="experiments" action="calendar_out.php" method="POST">
-    <label>Month: </label>
-    <select name="typeref" class="btn btn-secondary dropdown-toggle">
-      <option value="0">Select</option>
-    
-      <?php
-        $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
-        $experimentos="SELECT * FROM protocols";
-        $resultado=mysqli_query($connection,$experimentos);
-        $my_array = array();
-        while ($valores = mysqli_fetch_array($resultado)) {
-          
-          if (in_array($valores[type], $my_array)) {
-            
-          }
-          else {
-            echo '<option value="'.$valores[type].'">'.$valores[type].'</option>';
-          };
-
-          array_push($my_array, $valores[type]);
-          
-        }
-      ?>
-    </select>
-	
-	&nbsp&nbsp&nbsp&nbsp
-
-    <label>Day: </label>
-	<select name="typeref" class="btn btn-secondary dropdown-toggle">
-      <option value="0">Select</option>
-    
-      <?php
-        $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
-        $experimentos="SELECT * FROM protocols";
-        $resultado=mysqli_query($connection,$experimentos);
-        $my_array = array();
-        while ($valores = mysqli_fetch_array($resultado)) {
-          
-          if (in_array($valores[type], $my_array)) {
-            
-          }
-          else {
-            echo '<option value="'.$valores[type].'">'.$valores[type].'</option>';
-          };
-
-          array_push($my_array, $valores[type]);
-          
-        }
-      ?>
-    </select><br><br>
- 
-      
-	
-    <br>
-    <br>
-    <br>
-      
-      <input type="submit" class="fadeIn fourth btn btn-dark"" value="Submit" name="submit">
-  </form>
 
 
 
-</main>
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

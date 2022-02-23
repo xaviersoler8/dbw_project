@@ -55,43 +55,18 @@
 
 <?php
 $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
-$type=$_POST["typeref"];
-$amounnt=$_POST["tentacles"];
-$user=$_POST["userref"];
+$month=$_POST["month"];
+$room=$_POST["room"];
+$day=$_POST["day"];
+$hour=$_POST["hour"];
+$event=$_POST["event"];
+$description=$_POST["description"];
 
 
-$insertar="INSERT INTO prueba(type,amount,uwu) VALUES ('$type','$amounnt','$user')";
+$insertar="INSERT INTO calendar(event,day,month,room,description,hour) VALUES ('$event','$day','$month','$room','$description','$hour')";
 $resultado=mysqli_query($connection,$insertar);
 
-
-$valor_restar="SELECT * FROM protocols WHERE type='$type' AND user='$user'";
-$x=mysqli_query($connection,$valor_restar);
-
-$row = mysqli_fetch_assoc($x);
-echo "<br>";
-echo $row[steps];
-echo "<br><br>";
-$count=0;
-
-foreach (array_keys($row) as $key){
-
-    $valor_before="SELECT amount FROM reactives WHERE name ='$key'";
-    $z=mysqli_query($connection,$valor_before);
-    $uwu=mysqli_fetch_assoc($z);
-    $count=$count+1;
-    if ($count >= 3){
-      if ($row[$key]<>0){
-      echo "The amount of ";
-      echo $key;    
-      echo " to use is: ";
-      echo $row[$key]*$amounnt."<br>";
-      }
-    }
-    $new_valor=($uwu['amount']-(($row[$key])*$amounnt));
-    
-    $actualizar="UPDATE reactives SET amount=$new_valor WHERE name='$key'";
-    $y=mysqli_query($connection,$actualizar);
-};
+      echo "The event has been successfully saved.";
 
 ?>
 
