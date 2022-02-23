@@ -57,16 +57,12 @@
   <main role="main" class="container">
 
   <!-- PHP -->
+  <!-- AQUI PARA QUE NOS MUESTRE LOS PROTOCOLOS Y TO LA BAINA-->
   <?php
     $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
     $type=$_POST["typeref"];
-    $amounnt=$_POST["tentacles"];
+    $amounnt=$_POST["number"];
     $user=$_POST["userref"];
-
-
-    $insertar="INSERT INTO prueba(type,amount,uwu) VALUES ('$type','$amounnt','$user')";
-    $resultado=mysqli_query($connection,$insertar);
-
 
     $valor_restar="SELECT * FROM protocols WHERE type='$type' AND user='$user'";
     $x=mysqli_query($connection,$valor_restar);

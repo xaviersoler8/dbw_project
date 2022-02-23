@@ -82,7 +82,7 @@
       <option value="0">Select</option>
     
       <?php
-        $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+        include('php/connection_be.php');
         $experimentos="SELECT * FROM protocols";
         $resultado=mysqli_query($connection,$experimentos);
         $my_array = array();
@@ -107,7 +107,7 @@
       <option value="0">User</option>
     
       <?php
-        $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+        
         $experimentos="SELECT user FROM users";
         $resultado=mysqli_query($connection,$experimentos);
         while ($valores = mysqli_fetch_array($resultado)) {
@@ -120,7 +120,7 @@
     <p>Number of experiments:</p>
       <!-- <label for="tentacles">Number of experiments</label> -->
 
-        <input type="number" id="cantidad" name="tentacles" min="1" max="100">
+        <input type="number" id="cantidad" name="number" min="1" max="100">
         <br>
         <br>
         <br>

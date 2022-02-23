@@ -23,8 +23,6 @@ foreach (array_keys($row) as $key) {
     $uwu=mysqli_fetch_assoc($z);
 
     $new_valor=($uwu['amount']-(($row[$key])*$amounnt));
-
-
     
     $actualizar="UPDATE reactives SET amount=$new_valor WHERE name='$key'";
     $y=mysqli_query($connection,$actualizar);
