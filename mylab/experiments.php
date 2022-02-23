@@ -126,18 +126,18 @@
         <br>
         <p>Do you want to write the protocol in a pdf file?</p>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="yes">
       <label class="form-check-label" for="inlineRadio1">Yes</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="no">
       <label class="form-check-label" for="inlineRadio2">No</label>
     </div>
     <br>
     <br>
     <br>
       
-      <input type="submit" class="fadeIn fourth btn btn-dark"" value="Submit" name="submit">
+      <input type="submit" class="fadeIn fourth btn btn-dark" value="Submit" name="submit">
   </form>
 
 

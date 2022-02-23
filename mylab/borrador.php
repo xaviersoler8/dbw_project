@@ -1,3 +1,6 @@
+<!-- esto no sirve para nada solamente es un borrador antiguo -->
+
+
 <?php
 $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
 $type=$_POST["typeref"];
