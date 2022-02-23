@@ -59,11 +59,31 @@
   <!-- PHP -->
   <!-- AQUI PARA QUE NOS MUESTRE LOS PROTOCOLOS Y TO LA BAINA-->
   <?php
-    $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
-    $type=$_POST["typeref"];
-    $amounnt=$_POST["number"];
-    $user=$_POST["userref"];
 
+    if(isset($_POST['submit']) &&
+      isset($_POST["typeref"]) &&
+      isset($_POST["number"]) &&
+      isset($_POST["userref"]) && 
+      isset($_POST["inlineRadioOptions"])) {
+
+        include('php/connection_be.php');
+
+        $type=trim($_POST["typeref"]);
+        $amounnt=trim($_POST["number"]);
+        $user=trim($_POST["userref"]);
+        $print=trim($_POST["inlineRadioOptions"]);
+    
+    }else{
+        echo '
+             <script>
+                 alert("Please, complete the all the fields");
+                 window.location = "experiments.php";
+             </script>
+        ';
+        exit();
+    };
+  
+    
     $valor_restar="SELECT * FROM protocols WHERE type='$type' AND user='$user'";
     $x=mysqli_query($connection,$valor_restar);
     
