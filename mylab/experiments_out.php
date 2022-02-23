@@ -60,10 +60,10 @@
   <!-- AQUI PARA QUE NOS MUESTRE LOS PROTOCOLOS Y TO LA BAINA-->
   <?php
 
-    if(isset($_POST['submit']) &&
-      isset($_POST["typeref"]) &&
-      isset($_POST["number"]) &&
-      isset($_POST["userref"]) && 
+    if(isset($_POST["submit"]) &&
+      strlen($_POST["typeref"]) != 1 &&
+      $_POST["number"] != 0 &&
+      strlen($_POST["userref"]) != 1 && 
       isset($_POST["inlineRadioOptions"])) {
 
         include('php/connection_be.php');
