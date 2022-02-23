@@ -83,7 +83,7 @@
   <h3> STEPS </h3>
   <p>
     <?php
-    echo $row[steps];
+    echo "<pre>".$row[steps]."</pre>";
     echo "<br><br>";
     $count=0;
     ?>
