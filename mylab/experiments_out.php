@@ -1,3 +1,20 @@
+<?php
+
+        session_start();
+
+        if(!isset($_SESSION['user'])){
+                echo '
+                <script>
+                        alert("Please, connect session");
+                        window.location = "login.php";
+                </script>
+                ';
+                session_destroy();
+                die();
+        }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +34,7 @@
 <!--HEADER--> 
 
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #6c757d;">
-  <a class="navbar-brand" ><img width=50 src ="img/logo4.png"> MyLab</a>
+  <a class="navbar-brand" href="index.html"><img width=50 src ="img/logo4.png"> MyLab</a>
   <div class="navbar-collapse" id="navbarSupportedContent">
     <!-- experiments -->
     <div class="col-sm-2 col-xs-12 col-md-1">
@@ -59,14 +76,14 @@
   <!-- PHP -->
   <!-- AQUI PARA QUE NOS MUESTRE LOS PROTOCOLOS Y TO LA BAINA-->
   <?php
-
+        include('php/connection_be.php');
     if(isset($_POST["submit"]) &&
       strlen($_POST["typeref"]) != 1 &&
       $_POST["number"] != 0 &&
       strlen($_POST["userref"]) != 1 && 
       isset($_POST["inlineRadioOptions"])) {
 
-        include('php/connection_be.php');
+
 
         $type=trim($_POST["typeref"]);
         $amounnt=trim($_POST["number"]);
@@ -81,25 +98,27 @@
              </script>
         ';
         exit();
-    };
+  };
   
     
     $valor_restar="SELECT * FROM protocols WHERE type='$type' AND user='$user'";
-    $x=mysqli_query($connection,$valor_restar);
+    $x = mysqli_query($connection,$valor_restar);
     
     $row = mysqli_fetch_assoc($x);
+
+
   ?>
   <h1>
     <br>
     <?php
-    echo $row[type];
-    echo "<br>";
+    echo $row['type'];
     ?>
+    <br>
   </h1>
   <h3> STEPS </h3>
   <p>
     <?php
-    echo "<pre>".$row[steps]."</pre>";
+    echo "<pre>".$row['steps']."</pre>";
     echo "<br><br>";
     $count=0;
     ?>
@@ -132,6 +151,14 @@
 
     <br>
     <button class="btn btn-dark" onclick="history.back()">Go back</button>
+    <?php if ($print == "yes") {    
+      ?>
+      <button class="btn btn-dark" onclick="window.location.href='download.php'">Download</button>
+
+    
+    <?php } ?>
+
+
 
   </main>
 

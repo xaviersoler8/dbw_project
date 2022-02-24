@@ -1,3 +1,19 @@
+<?php
+
+        session_start();
+
+        if(!isset($_SESSION['user'])){
+                echo '
+                <script>
+                        alert("Please, connect session");
+                        window.location = "../login.php";
+                </script>
+                ';
+                session_destroy();
+                die();
+        }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +33,7 @@
 <!--HEADER--> 
 
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #6c757d;">
-  <a class="navbar-brand" ><img width=50 src ="img/logo4.png"> MyLab</a>
+  <a class="navbar-brand" href="../index.html" ><img width=50 src ="img/logo4.png"> MyLab</a>
   <div class="navbar-collapse" id="navbarSupportedContent">
     <!-- experiments -->
     <div class="col-sm-2 col-xs-12 col-md-1">
@@ -54,7 +70,7 @@
 
 
 <?php
-$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+        include('../php/connection_be.php');
 $month=$_POST["month"];
 $room=$_POST["room"];
 $day=$_POST["day"];
@@ -66,7 +82,12 @@ $description=$_POST["description"];
 $insertar="INSERT INTO calendar(event,day,month,room,description,hour) VALUES ('$event','$day','$month','$room','$description','$hour')";
 $resultado=mysqli_query($connection,$insertar);
 
-      echo "The event has been successfully saved.";
+      echo '
+      <script>
+          alert("The event has been added successfully!");
+          window.location = "experiments.php";
+      </script>
+ ';
 
 ?>
 

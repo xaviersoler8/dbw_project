@@ -36,7 +36,7 @@ if(!isset($_SESSION['user'])){
 <!--HEADER--> 
 
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #6c757d;">
-    <a class="navbar-brand" ><img width=50 src ="img/logo4.png"> MyLab</a>
+    <a class="navbar-brand" href="index.html"><img width=50 src ="img/logo4.png"> MyLab</a>
     <div class="navbar-collapse" id="navbarSupportedContent">
       <!-- experiments -->
       <div class="col-sm-2 col-xs-12 col-md-1">
@@ -88,7 +88,7 @@ if(!isset($_SESSION['user'])){
                 <tr>
                     
   <?php
-$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+          include('php/connection_be.php');
 $counter=1;
 while($counter <= 7){
 
