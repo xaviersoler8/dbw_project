@@ -130,6 +130,36 @@
 				</div>
 
 			</div>
+
+
+                    
+  <?php
+$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+$counter=1;
+while($counter <= 4){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+
+?>
+
+
+
+
 			<div class="row justify-content-center">
 						<form id="calendar" action="calendar_out.php" method="POST">
 				<label>Month: </label>
