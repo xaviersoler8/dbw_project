@@ -136,14 +136,15 @@
   <?php
 $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
 $counter=1;
-while($counter <= 4){
+echo '<table class="table table-hover">'."<tr><th scope='row'>Event</th><th>Month</th><th>Day</th><th>Room</th><th>Description</th><th>Hour</th></tr>";
+
+while($counter <= 200){
 
 $protocolstable="SELECT * FROM calendar WHERE event_id='$counter'";
 $x=mysqli_query($connection,$protocolstable);
 $counter=$counter+1;
 $row = mysqli_fetch_assoc($x);
 $count=0;
-
 foreach (array_keys($row) as $key){
     $count=$count+1;
     if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
@@ -153,6 +154,8 @@ foreach (array_keys($row) as $key){
     if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
     if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
 };};
+echo "</table><br><br><br>";
+
 
 
 ?>
