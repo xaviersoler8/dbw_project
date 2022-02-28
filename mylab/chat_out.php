@@ -75,6 +75,7 @@
 <!-- CHAT -->
 
 <?php
+include('chat_1.php');
 
 $message = trim($_POST['Send']);
 

@@ -16,8 +16,14 @@
 ?>
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .div-1 {
+        background-color: #EBEBEB;
+    }
 
+</style>
 <!-- CHAT -->
+<body style="background-color:Gray;">
 
 
 <?php
@@ -40,7 +46,7 @@ $row = mysqli_fetch_assoc($x);
 $count=1;
 foreach (array_keys($row) as $key){
     if ($count == 1){$numid=$row[$key];};
-    if ($count == 2){echo '<div class="w3-panel w3-border w3-round-xlarge">
+    if ($count == 2){echo '<div class="w3-panel w3-border w3-round-xlarge div-1">
       <p>'.$row[$key].'</p></div>';};
     $count=$count+1;
     };};
