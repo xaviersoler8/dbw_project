@@ -37,7 +37,7 @@
 	<body>
 
 		<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #6c757d;">
-			<a class="navbar-brand" ><img width=50 src ="../img/logo4.png"> MyLab</a>
+			<a class="navbar-brand" href = "../index.html"><img width=50 src ="../img/logo4.png"> MyLab</a>
 			<div class="navbar-collapse" id="navbarSupportedContent">
 			  <!-- experiments -->
 			  <div class="col-sm-2 col-xs-12 col-md-1">
@@ -134,7 +134,7 @@
 
                     
   <?php
-$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+          include('php/connection_be.php');
 $counter=1;
 echo '<table class="table table-hover">'."<tr><th scope='row'>Event</th><th>Month</th><th>Day</th><th>Room</th><th>Description</th><th>Hour</th></tr>";
 
@@ -170,7 +170,6 @@ echo "</table><br><br><br>";
 				<option value="0">Select</option>
 				
 				<?php
-					$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
 					$month="SELECT * FROM month";
 					$resultado=mysqli_query($connection,$month);
 					$my_array = array();
@@ -195,7 +194,6 @@ echo "</table><br><br><br>";
 				<option value="0">Select</option>
 				
 				<?php
-					$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
 					$day="SELECT * FROM day";
 					$resultado=mysqli_query($connection,$day);
 					$my_array = array();
@@ -220,7 +218,6 @@ echo "</table><br><br><br>";
 				<option value="0">Select</option>
 				
 				<?php
-					$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
 					$hour="SELECT * FROM hour";
 					$resultado=mysqli_query($connection,$hour);
 					$my_array = array();
