@@ -29,6 +29,13 @@
   <script src="mylab/js/scriptbutton.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+  <style>
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 50px;
+}
+</style>
 
 </head>
 
@@ -60,7 +67,7 @@
     <!-- chat -->
     <div class="col-sm-2 col-xs-12 col-md-1">
       <li class="nav-item">
-        <a class="nav-link" href="chat.php"><img width=30 src ="img/chat_icon.png"></a>
+        <a class="nav-link" href="chat_1.php"><img width=30 src ="img/chat_icon.png"></a>
       </li>
     </div>
     <!-- profile -->
@@ -73,14 +80,18 @@
 </nav>
 
 
-<h2>MyLab's xat</h2>
 
-<iframe src="chat_2.php" style="height:200px;width:300px" title="Iframe Example"></iframe>
+<div class="center">
+
+<h2>MyLab's xat</h2><br>
+
+<iframe src="chat_2.php" style="height:600px;width:450px" title="Iframe Example"></iframe>
+<form method="post" action="chat_out.php">
+		<input type="text" id="chat" placeholder="Write here your message" name = "textchat">
+		<input type="submit" value="Send" name="Send" href="chat_out.php">
+	  </form>
+
+</div>
 
 </body>
 </html>
-
-<form method="post" action="chat_out.php">
-		<input type="text" id="chat" placeholder="Write here your message" name = "textchat">
-		<input type="submit" value="Send" name = "Send" href="chat_out.php">
-	  </form>

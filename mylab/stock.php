@@ -59,7 +59,7 @@ if(!isset($_SESSION['user'])){
       <!-- chat -->
       <div class="col-sm-2 col-xs-12 col-md-1">
         <li class="nav-item">
-          <a class="nav-link" href="chat.php"><img width=30 src ="img/chat_icon.png"></a>
+          <a class="nav-link" href="chat_1.php"><img width=30 src ="img/chat_icon.png"></a>
         </li>
       </div>
       <!-- profile -->

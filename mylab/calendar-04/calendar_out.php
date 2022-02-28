@@ -38,31 +38,31 @@
     <!-- experiments -->
     <div class="col-sm-2 col-xs-12 col-md-1">
       <li class="nav-item active">
-        <a class="nav-link" href="experiments.php"><img width=30 src ="img/exp_icon.png"></a>
+        <a class="nav-link" href="../experiments.php"><img width=30 src ="../img/exp_icon.png"></a>
       </li>
     </div>
     <!-- stock -->
     <div class="col-sm-2 col-xs-12 col-md-1">
       <li class="nav-item">
-        <a class="nav-link" href="stock.php"><img width=30 src ="img/stock_icon.png"></a>
+        <a class="nav-link" href="../stock.php"><img width=30 src ="../img/stock_icon.png"></a>
       </li>
     </div>
     <!-- calendar -->
     <div class="col-sm-2 col-xs-12 col-md-1">
       <li class="nav-item">
-          <a class="nav-link" href="calendar-04/calendar.php"><img width=30 src ="img/cal_icon.png"></a>
+          <a class="nav-link" href="calendar.php"><img width=30 src ="../img/cal_icon.png"></a>
         </li>
     </div>
     <!-- chat -->
     <div class="col-sm-2 col-xs-12 col-md-1">
       <li class="nav-item">
-        <a class="nav-link" href="chat.php"><img width=30 src ="img/chat_icon.png"></a>
+        <a class="nav-link" href="../chat_1.php"><img width=30 src ="../img/chat_icon.png"></a>
       </li>
     </div>
     <!-- profile -->
     <div class="col-sm-2 col-xs-12 col-md-1">
       <li class="nav-item">
-        <a class="nav-link" href="profile.php"><img width=30 src ="img/prof_icon.png"></a>
+        <a class="nav-link" href="../profile.php"><img width=30 src ="../img/prof_icon.png"></a>
       </li>
     </div>
   </div>

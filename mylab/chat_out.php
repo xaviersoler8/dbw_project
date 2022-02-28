@@ -60,7 +60,7 @@
     <!-- chat -->
     <div class="col-sm-2 col-xs-12 col-md-1">
       <li class="nav-item">
-        <a class="nav-link" href="chat.php"><img width=30 src ="img/chat_icon.png"></a>
+        <a class="nav-link" href="chat_1.php"><img width=30 src ="img/chat_icon.png"></a>
       </li>
     </div>
     <!-- profile -->
@@ -75,17 +75,28 @@
 <!-- CHAT -->
 
 <?php
-include('chat_1.php');
 
-$message = trim($_POST['Send']);
+$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" ); #igual hai q cambiar esto
 
-$insertar="INSERT INTO xat(message) VALUES ('$message')";
-$resultado=mysqli_query($connection,$insertar);
-echo "The message has been sent successfully!<br>";
+if (isset($_POST["textchat"])) {
+  
+  $message=trim($_POST["textchat"]);
 
-echo '<button class="btn btn-dark" onclick="history.back()">Go back</button>';
 
-    
+}else{
+    echo '
+         <script>
+             alert("Please, complete the all the fields");
+             window.location = "experiments.php";
+         </script>
+    ';
+    exit();
+};
+
+$query= "INSERT INTO xat(message) VALUES ('$message')";
+$execute = mysqli_query($connection, $query);     
+echo"The message has been sent successfully.".'<br>';
+echo'<button class="btn btn-dark" onclick="history.back()">Go back</button>';
 
     ?>
 
