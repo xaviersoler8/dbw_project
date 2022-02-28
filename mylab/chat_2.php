@@ -36,7 +36,7 @@ $result=mysqli_query($connection,$sql);
 
     $counter=1;
 
-    while($counter<=10){
+    while($counter<=2000){
 
 $xatline="SELECT * FROM xat WHERE idxat='$counter'";
 
