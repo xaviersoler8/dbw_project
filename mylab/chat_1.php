@@ -86,12 +86,27 @@
 <h2>MyLab's xat</h2><br>
 
 <iframe src="chat_2.php" style="height:600px;width:450px" title="Iframe Example"></iframe>
-<form method="post" action="chat_out.php">
+<form method="post" action="chat_1.php">
 		<input type="text" id="chat" placeholder="Write here your message" name = "textchat">
-		<input type="submit" value="Send" name="Send" href="chat_out.php">
+		<input type="submit" value="Send" name="Send" href="chat_1.php">
 	  </form>
 
 </div>
+
+<?php
+
+$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" ); #igual hai q cambiar esto
+
+if (isset($_POST["textchat"])) {
+  
+  $message=trim($_POST["textchat"]);
+  $query= "INSERT INTO xat(message) VALUES ('$message')";
+  $execute = mysqli_query($connection, $query);     
+  
+
+}
+
+    ?>
 
 </body>
 </html>
