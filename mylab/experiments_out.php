@@ -27,7 +27,18 @@
   <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="mylab/js/scriptbutton.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+#main {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
 
+#main div {
+  flex: 1;
+}
+  </style>
 
 </head>
 
@@ -124,8 +135,8 @@
     ?>
   </p>
   <h3> AMOUNTS </h3>
-  <p>
-    <?php
+
+<?php
     foreach (array_keys($row) as $key){
 
         $valor_before="SELECT amount FROM reactives WHERE name ='$key'";
@@ -134,10 +145,10 @@
         $count=$count+1;
         if ($count >= 3){
           if ($row[$key]<>0){
-          echo "The amount of ";
+          echo '<div id="main"><div>The amount of ';
           echo $key;    
-          echo " to use is: ";
-          echo $row[$key]*$amounnt."<br>";
+          echo " to use is:</div>";
+          echo "<div>".$row[$key]*$amounnt."</div></div>"."<br>";
           }
         }
         $new_valor=($uwu['amount']-(($row[$key])*$amounnt));
@@ -147,7 +158,6 @@
         };
     ?>
 
-  </p>  
 
     <br>
     <button class="btn btn-dark" onclick="history.back()">Go back</button>
