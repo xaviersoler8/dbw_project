@@ -100,7 +100,7 @@ $count=0;
 
 foreach (array_keys($row) as $key){
     $count=$count+1;
-    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 2){$spaces=str_repeat("&nbsp", 140);echo '<tr align= "right"><th scope="row">';echo $row[$key]; echo "</th>";};
     if ($count == 3){$amount=$row[$key]; echo "<td>";echo $amount;};
     if ($count == 4){$units=$row[$key]; echo "&nbsp";echo $units; echo "</td>";};    
     if ($count == 5){if($amount>$row[$key]){echo "<td>&#9989;</td></tr>";$count=0;}else{echo "<td>&#10060;</td></tr>"; $count=0;};};
