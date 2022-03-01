@@ -134,7 +134,7 @@
 
                     
   <?php
-          include('php/connection_be.php');
+          include('../php/connection_be.php');
 $counter=1;
 echo '<table class="table table-hover">'."<tr><th scope='row'>Event</th><th>Month</th><th>Day</th><th>Room</th><th>Description</th><th>Hour</th></tr>";
 
