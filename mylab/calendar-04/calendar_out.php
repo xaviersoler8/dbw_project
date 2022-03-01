@@ -33,7 +33,7 @@
 <!--HEADER--> 
 
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #6c757d;">
-  <a class="navbar-brand" href="../index.html" ><img width=50 src ="img/logo4.png"> MyLab</a>
+  <a class="navbar-brand" href="../index.html" ><img width=50 src ="../img/logo4.png"> MyLab</a>
   <div class="navbar-collapse" id="navbarSupportedContent">
     <!-- experiments -->
     <div class="col-sm-2 col-xs-12 col-md-1">
@@ -85,7 +85,7 @@ $resultado=mysqli_query($connection,$insertar);
       echo '
       <script>
           alert("The event has been added successfully!");
-          window.location = "experiments.php";
+          window.location = "calendar.php";
       </script>
  ';
 
