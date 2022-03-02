@@ -131,7 +131,20 @@
   <h3> STEPS </h3>
   <p>
     <?php
-    echo "<pre>".$row['steps']."</pre>";
+    $pattern = '/{{(\w*)}}/';
+    $texto = $row['steps'];
+    preg_match_all($pattern, $texto, $coincidencias);
+    $num_matches = count($coincidencias[1]);
+
+    for ($i = 0; $i < $num_matches; $i++) {
+      $m = $coincidencias[1][$i];
+      $replacement = $row[$m];
+      $new_text = preg_replace($pattern, $replacement, $texto,1);
+      $texto = $new_text;
+
+    }
+    
+    echo "<pre>".$texto."</pre>";
     echo "<br><br>";
     $count=0;
     ?>
@@ -140,24 +153,31 @@
 
 <?php
     foreach (array_keys($row) as $key){
+        if ($key<>'steps') {
 
-        $valor_before="SELECT amount FROM reactives WHERE name ='$key'";
-        $z=mysqli_query($connection,$valor_before);
-        $uwu=mysqli_fetch_assoc($z);
-        $count=$count+1;
-        if ($count >= 3){
-          if ($row[$key]<>0){
-          echo '<div id="main"><div>The amount of ';
-          echo '<b>'.$key.'</b>';    
-          echo " to use is:</div>";
-          echo "<div><b>".$row[$key]*$amounnt."</b></div></div>"."<br>";
-          }
-        }
+          $valor_before="SELECT amount FROM reactives WHERE name ='$key'";
+          $z=mysqli_query($connection,$valor_before);
+          $uwu=mysqli_fetch_assoc($z);
+          $units="SELECT units FROM reactives WHERE name ='$key'";
+          $zz=mysqli_query($connection,$units);
+          $uwu2=mysqli_fetch_assoc($zz);
+          $count=$count+1;
+          if ($count >= 3){
+            if ($row[$key]<>0){
+              echo '<div id="main"><div>The amount of ';
+              echo '<b>'.$key.'</b>';    
+              echo " to use is:</div>";
+              echo "<div><b>".$row[$key]*$amounnt." ".$uwu2['units']."</b></div></div>"."<br>";
+            }
+         }
         $new_valor=($uwu['amount']-(($row[$key])*$amounnt));
         
         $actualizar="UPDATE reactives SET amount=$new_valor WHERE name='$key'";
         $y=mysqli_query($connection,$actualizar);
         };
+
+      };
+        
     ?>
 </div>
 
