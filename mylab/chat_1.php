@@ -85,12 +85,12 @@ document.getElementById('if').contentWindow.scrollTo(10,999999);
   </div>
 </nav>
 
-<div class="center">
+<div class="center" style="height:100%;width:100%">
+<div class="row justify-content-center">
 
+<div class="col-md-6 text-center mb-5">
 <h2>MyLab's xat</h2><br>
-
-
-<iframe id="if" name="DP_Log_frame" src="chat_2.php" style="height:600px;width:450px" onload="gonow()"></iframe>
+<iframe id="if" name="DP_Log_frame" src="chat_2.php" style="height:500px;width:100%"  onload="gonow()"></iframe>
 
 <form method="post" action="chat_1.php">
 		<input type="text" id="chat" placeholder="Write here your message" name = "textchat">
@@ -98,6 +98,8 @@ document.getElementById('if').contentWindow.scrollTo(10,999999);
 	  </form>
 
 
+</div>
+</div>
 </div>
 
 <script>

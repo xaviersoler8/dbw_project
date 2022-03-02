@@ -29,14 +29,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <style>
 #main {
-  width: 50%;
-  height: 30px;
+  width: 80%;
+  height: 30%;
   display: flex;
   align-items: center;
 }
 
 #main div {
   flex: 1;
+  margin-right: 15px
 }
   </style>
 
@@ -147,9 +148,9 @@
         if ($count >= 3){
           if ($row[$key]<>0){
           echo '<div id="main"><div>The amount of ';
-          echo $key;    
+          echo '<b>'.$key.'</b>';    
           echo " to use is:</div>";
-          echo "<div>".$row[$key]*$amounnt."</div></div>"."<br>";
+          echo "<div><b>".$row[$key]*$amounnt."</b></div></div>"."<br>";
           }
         }
         $new_valor=($uwu['amount']-(($row[$key])*$amounnt));

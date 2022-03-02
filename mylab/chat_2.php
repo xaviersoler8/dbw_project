@@ -56,7 +56,7 @@ $count=1;
 foreach (array_keys($row) as $key){
     if ($count == 1){$numid=$row[$key];};
     if ($count == 2){$user1=$row[$key];};
-    if ($count == 3){$printtt=$user1.":&nbsp".$row[$key];
+    if ($count == 3){$printtt='<b>'.$user1.'</b>'.":&nbsp".$row[$key];
         echo '<div class="w3-panel w3-border w3-round-xlarge div-1">
       <p>'.$printtt.'</p></div>';};
     $count=$count+1;
