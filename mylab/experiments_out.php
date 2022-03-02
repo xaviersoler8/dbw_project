@@ -86,14 +86,15 @@
 
   <!-- PHP -->
   <!-- AQUI PARA QUE NOS MUESTRE LOS PROTOCOLOS Y TO LA BAINA-->
+
+
   <?php
-        include('php/connection_be.php');
+    include('php/connection_be.php');    
     if(isset($_POST["submit"]) &&
       strlen($_POST["typeref"]) != 1 &&
       $_POST["number"] != 0 &&
       strlen($_POST["userref"]) != 1 && 
-      isset($_POST["inlineRadioOptions"])) {
-
+      isset($_POST["inlineRadioOptions"])) { 
 
 
         $type=trim($_POST["typeref"]);
@@ -111,7 +112,6 @@
         exit();
   };
   
-    
     $valor_restar="SELECT * FROM protocols WHERE type='$type' AND user='$user'";
     $x = mysqli_query($connection,$valor_restar);
     
@@ -119,6 +119,7 @@
 
 
   ?>
+  <div id="printableArea">
   <h1>
     <br>
     <?php
@@ -157,21 +158,36 @@
         $y=mysqli_query($connection,$actualizar);
         };
     ?>
-
+</div>
 
     <br>
     <button class="btn btn-dark" onclick="history.back()">Go back</button>
     <?php if ($print == "yes") {    
       ?>
-      <button class="btn btn-dark" onclick="window.location.href='download.php'">Download</button>
+      <button class="btn btn-dark" onclick="printDiv('printableArea')">Download</button>
 
     
     <?php } ?>
-
 
 
   </main>
 
 
 </body>
+
+
+<!-- Print pdf -->
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
+
 </html>
