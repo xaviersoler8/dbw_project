@@ -135,12 +135,223 @@
                     
   <?php
           include('../php/connection_be.php');
-$counter=1;
 echo '<table class="table table-hover">'."<tr><th scope='row'>Event</th><th>Month</th><th>Day</th><th>Room</th><th>Description</th><th>Hour</th></tr>";
 
+
+$counter=1;
+$month='January';
 while($counter <= 200){
 
-$protocolstable="SELECT * FROM calendar WHERE event_id='$counter'";
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='February';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='March';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='April';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='May';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='June';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='July';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='August';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='September';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='October';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='November';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
+$x=mysqli_query($connection,$protocolstable);
+$counter=$counter+1;
+$row = mysqli_fetch_assoc($x);
+$count=0;
+foreach (array_keys($row) as $key){
+    $count=$count+1;
+    if ($count == 2){echo "<tr><th scope='row'>";echo $row[$key]; echo "</th>";};
+    if ($count == 3){echo "<td>";echo $row[$key]; echo "</td>";};
+	if ($count == 4){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 5){echo "<td>";echo $row[$key]; echo "</td>";};  
+    if ($count == 6){echo "<td>";echo $row[$key]; echo "</td>";};   
+    if ($count == 7){echo "<td>";echo $row[$key]; echo "</td></tr>"; $count=0;};
+};};
+
+$counter=1;
+$month='December';
+while($counter <= 200){
+
+$protocolstable="SELECT * FROM calendar WHERE event_id='$counter' AND month='$month'";
 $x=mysqli_query($connection,$protocolstable);
 $counter=$counter+1;
 $row = mysqli_fetch_assoc($x);

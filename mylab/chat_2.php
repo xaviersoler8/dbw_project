@@ -1,3 +1,10 @@
+<html>
+<head>
+
+
+
+
+
 <?php
 
         session_start();
@@ -22,9 +29,11 @@
     }
 
 </style>
+</head>
 <!-- CHAT -->
 <body style="background-color:Gray;">
 
+<div id="mydiv">
 
 <?php
 
@@ -46,8 +55,10 @@ $row = mysqli_fetch_assoc($x);
 $count=1;
 foreach (array_keys($row) as $key){
     if ($count == 1){$numid=$row[$key];};
-    if ($count == 2){echo '<div class="w3-panel w3-border w3-round-xlarge div-1">
-      <p>'.$row[$key].'</p></div>';};
+    if ($count == 2){$user1=$row[$key];};
+    if ($count == 3){$printtt='<b>'.$user1.'</b>'.":&nbsp".$row[$key];
+        echo '<div class="w3-panel w3-border w3-round-xlarge div-1">
+      <p>'.$printtt.'</p></div>';};
     $count=$count+1;
     };};
 
@@ -56,5 +67,7 @@ foreach (array_keys($row) as $key){
     
 
     ?>
+</div>
+</body>
 
-
+</html>

@@ -28,7 +28,12 @@
   <link rel="stylesheet" href="style.css" />
   <script src="mylab/js/scriptbutton.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script>
+function gonow() {
+document.getElementById('if').contentWindow.scrollTo(10,999999);
 
+}
+</script>
   <style>
 .center {
   margin: auto;
@@ -36,6 +41,7 @@
   padding: 50px;
 }
 </style>
+
 
 </head>
 
@@ -79,34 +85,58 @@
   </div>
 </nav>
 
+<div class="center" style="height:100%;width:100%">
+<div class="row justify-content-center">
 
-
-<div class="center">
-
+<div class="col-md-6 text-center mb-5">
 <h2>MyLab's xat</h2><br>
+<iframe id="if" name="DP_Log_frame" src="chat_2.php" style="height:500px;width:100%"  onload="gonow()"></iframe>
 
-<iframe src="chat_2.php" style="height:600px;width:450px" title="Iframe Example"></iframe>
 <form method="post" action="chat_1.php">
 		<input type="text" id="chat" placeholder="Write here your message" name = "textchat">
 		<input type="submit" value="Send" name="Send" href="chat_1.php">
 	  </form>
 
+
 </div>
+</div>
+</div>
+
+<script>
+function gotoBottom(id){
+   var element = document.getElementById(id);
+   element.scrollTop = element.scrollHeight - element.clientHeight;
+}
+</script>
 
 <?php
 
 $connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" ); #igual hai q cambiar esto
 
 if (isset($_POST["textchat"])) {
+  $user1=$_SESSION['user'];
   
+  $usuario="SELECT * FROM users WHERE email='$user1'";
+  $x = mysqli_query($connection,$usuario);
+  $row = mysqli_fetch_assoc($x);
+
+  $count=1;
+  foreach (array_keys($row) as $key){
+      if ($count == 4){$user2=$row[$key];};
+      $count=$count+1;
+      };
+
+
   $message=trim($_POST["textchat"]);
-  $query= "INSERT INTO xat(message) VALUES ('$message')";
-  $execute = mysqli_query($connection, $query);     
-  
+  $query= "INSERT INTO xat(user,message) VALUES ('$user2','$message')";
+  $execute = mysqli_query($connection, $query);  
 
-}
+};
 
-    ?>
+?>
+
+
 
 </body>
+
 </html>
