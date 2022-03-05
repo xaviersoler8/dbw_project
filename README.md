@@ -14,9 +14,12 @@ CSS
 MySQL
 
 # To do list  
-- WARNING  
-- CALENDAR?  
-- CARRUSEL INDEX  
+- APP  
+  - WARNING  
+  - CALENDAR?  
+- INDEX  
+  - CARRUSEL
+  - GITHUB  
 - SERVIDOR:  
   - CORREO PROFE  
   - CREAR DB  
