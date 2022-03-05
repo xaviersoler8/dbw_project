@@ -34,6 +34,7 @@ document.getElementById('if').contentWindow.scrollTo(10,999999);
 
 }
 </script>
+
   <style>
 .center {
   margin: auto;
@@ -50,7 +51,7 @@ document.getElementById('if').contentWindow.scrollTo(10,999999);
 <!--HEADER--> 
 
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #6c757d;">
-  <a class="navbar-brand" ><img width=50 src ="img/logo4.png"> MyLab</a>
+  <a class="navbar-brand" href="index.html" ><img width=50 src ="img/logo4.png"> MyLab</a>
   <div class="navbar-collapse" id="navbarSupportedContent">
     <!-- experiments -->
     <div class="col-sm-2 col-xs-12 col-md-1">
@@ -85,19 +86,22 @@ document.getElementById('if').contentWindow.scrollTo(10,999999);
   </div>
 </nav>
 
-<div class="center" style="height:100%;width:100%">
+<!-- MAIN -->
+<div class="center" style="width:100%; ">
 <div class="row justify-content-center">
 
 <div class="col-md-6 text-center mb-5">
-<h2>MyLab's xat</h2><br>
-<iframe id="if" name="DP_Log_frame" src="chat_2.php" style="height:500px;width:100%"  onload="gonow()"></iframe>
+<h2>MyLab's chat</h2><br>
+<iframe id="if" name="DP_Log_frame" src="chat_2.php" style="height:500px;width:100%; border:1px solid black; box-shadow: 30px 10px 20px; padding=3px"  onload="gonow()"></iframe>
 
+<div style="padding:15px">
 <form method="post" action="chat_1.php">
 		<input type="text" id="chat" placeholder="Write here your message" name = "textchat">
 		<input type="submit" value="Send" name="Send" href="chat_1.php">
 	  </form>
 
 
+</div>
 </div>
 </div>
 </div>
@@ -138,5 +142,17 @@ if (isset($_POST["textchat"])) {
 
 
 </body>
+
+	  <!--footer -->
+
+<!--footer -->
+<div style="position:absolute; bottom:33px; width: 100%; height: 80px;">
+<hr >
+<footer class="row align-items-center" style="width: 100%; height: 80px;background-color:#6c757d">
+<div class="col text-center font-weight-dark">
+		&copy Copyright MyLab Team, &#xae All rights reserved.
+	</div>
+</footer>
+<div>
 
 </html>

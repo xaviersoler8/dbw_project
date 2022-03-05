@@ -30,7 +30,7 @@
   <style>
 #main {
   width: 80%;
-  height: 30%;
+  /* height: 30%; */
   display: flex;
   align-items: center;
 }
@@ -195,7 +195,16 @@
 
 
 </body>
+<!--footer -->
 
+<div >
+  <hr>
+<footer class="row align-items-center " style="position:relative; bottom:0; width: 100%; height: 80px; background-color:#6c757d">
+<div class="col text-center font-weight-dark">
+		&copy Copyright MyLab Team, &#xae All rights reserved.
+	</div>
+    </footer>
+  </div>
 
 <!-- Print pdf -->
 <script>

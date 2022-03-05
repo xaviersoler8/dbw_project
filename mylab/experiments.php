@@ -73,8 +73,8 @@
 </nav>
 
 <!--EXPERIMENTS-->
-<main role="main" class="container">
-  <br>
+<main >
+<div class="container" style=" margin-top: 70px">
   <p>Type of experiment:</p>
   <form id="experiments" action="experiments_out.php" method="POST">
     <!-- <label>nombre experimento</label> -->
@@ -139,7 +139,7 @@
       
       <input type="submit" class="fadeIn fourth btn btn-dark" value="Submit" name="submit">
   </form>
-
+      </div>
 
 
 </main>
@@ -148,7 +148,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
 </body>
+
+
+<!--footer -->
+<div style="position:absolute; bottom:33px; width: 100%; height: 80px;">
+<hr >
+<footer class="row align-items-center" style="width: 100%; height: 80px;background-color:#6c757d">
+<div class="col text-center font-weight-dark">
+		&copy Copyright MyLab Team, &#xae All rights reserved.
+	</div>
+</footer>
+<div>
 
 </html>

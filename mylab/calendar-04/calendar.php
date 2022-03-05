@@ -18,11 +18,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Calendar 04</title>
+  	<title>Calendar</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+<!-- 
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet"> -->
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -30,8 +30,6 @@
 
 	<link href="indexcalendar.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-
 
 	</head>
 	<body>
@@ -72,16 +70,11 @@
 			</div>
 		  </nav>
 
-
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">MyLab's Calendar</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-7 text-center mb-5">
+				<h2 >MyLab's Calendar</h2>
 				    <div> <!-- Here the class was:   class="calendar-container"-->
 				      <div class="calendar"> 
 				        <div class="year-header"> 
@@ -483,5 +476,18 @@ echo "</table><br><br><br>";
   <script src="js/main.js"></script>
 
 	</body>
+
+<!--footer -->
+
+<div >
+  <hr>
+<footer class="row align-items-center " style="position:relative; bottom:0; width: 100%; height: 80px; background-color:#6c757d">
+<div class="col text-center font-weight-dark">
+		&copy Copyright MyLab Team, &#xae All rights reserved.
+	</div>
+    </footer>
+  </div>
+</div>
+
 </html>
 

@@ -39,12 +39,18 @@
 	  </form>
   
 	  <!-- Remind Passowrd & Register -->
-	<div id="formFooter">
-		<a class="underlineHover" href="#">Forgot Password?</a>
-	</div>
 		<div id="formFooter">
 		<a class="underlineHover" href="register.php">Register</a>
 	</div>
+	<div id="formFooter">
+	<a href = "index.html"><buttom type = "buttom" class = "btn btn-outline-secondary btn-lg" style="background-color:grey; color:white ">MyLab Web</buttom></a>
+	<style>
+	.btn-outline-secondary:hover {
+  background-color: #c0a8a1 !important;
+}
+</style>
+</div>
+
   
 	</div>
   </div>

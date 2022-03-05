@@ -15,9 +15,9 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
 	<meta charset="utf-8">
@@ -38,15 +38,17 @@
 <!--HEADER--> 
 
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #6c757d;">
-    <a class="navbar-brand" ><img width=50 src ="img/logo4.png"> MyLab</a>
-    <div class="navbar-collapse" id="navbarSupportedContent">
+      <a class="navbar-brand" href="index.html"><img width=50 src ="img/logo4.png"> MyLab</a>
+<div class="navbar-collapse" id="navbarSupportedContent">
+
       <!-- experiments -->
-      <div class="col-sm-2 col-xs-12 col-md-1">
+      <div class="col-sm-auto col-xs-12 col-md-1">
         <li class="nav-item active">
           <a class="nav-link" href="experiments.php"><img width=30 src ="img/exp_icon.png"></a>
         </li>
       </div>
       <!-- stock -->
+      <!-- <div class="col-sm-auto col-xs-12 col-md-auto"> -->
       <div class="col-sm-2 col-xs-12 col-md-1">
         <li class="nav-item">
           <a class="nav-link" href="stock.php"><img width=30 src ="img/stock_icon.png"></a>
@@ -73,10 +75,11 @@
     </div>
   </nav>
 
-<!--PROFILE-->
 
+<!--PROFILE-->
+<div>
 <div class="wrapper fadeInDown">
-	<div id="formContent">
+	<div id="formContent" style="position: relative !important; top:70px">
   
 	  <!-- Icon -->
 	  <div class="fadeIn first">
@@ -120,8 +123,15 @@
 	</div>
   </div>
 
-
-
+<!--footer -->
+<div style="position:absolute; bottom:33px; width: 100%; height: 80px;">
+<hr >
+<footer class="row align-items-center" style="width: 100%; height: 80px;background-color:#6c757d">
+<div class="col text-center font-weight-dark">
+		&copy Copyright MyLab Team, &#xae All rights reserved.
+	</div>
+</footer>
+<div>
 
 </body>
 
