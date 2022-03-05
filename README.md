@@ -7,12 +7,17 @@
 DBW project about creating a lab managment API
 
 # SOFTWARE
-OLA
-
-Python3
-
 PHP
 
 CSS
 
 MySQL
+
+#To do list
+[] WARNING
+[] CALENDAR?
+[] CARRUSEL INDEX
+[] SERVIDOR:
+  [] CORREO PROFE
+  [] CREAR DB
+  [] SUBIR CARPETA
