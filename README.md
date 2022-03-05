@@ -14,8 +14,8 @@ CSS
 MySQL
 
 # To do list  
-[] WARNING
-[] CALENDAR?
+[]WARNING  
+[]CALENDAR?  
 [] CARRUSEL INDEX
 [] SERVIDOR:
   [] CORREO PROFE
