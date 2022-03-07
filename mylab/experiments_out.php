@@ -112,10 +112,10 @@
         ';
         exit();
   };
+
   
     $valor_restar="SELECT * FROM protocols WHERE type='$type' AND user='$user'";
     $x = mysqli_query($connection,$valor_restar);
-    
     $row = mysqli_fetch_assoc($x);
 
 
@@ -153,15 +153,30 @@
 
 <?php
     foreach (array_keys($row) as $key){
-        if ($key<>'steps') {
+        if ($key <> 'steps' && $key <> 'id_exp') {
 
           $valor_before="SELECT amount FROM reactives WHERE name ='$key'";
           $z=mysqli_query($connection,$valor_before);
           $uwu=mysqli_fetch_assoc($z);
+
+          $cantidad= $row[$key]*$amounnt;
+
+          if ($cantidad > $uwu['amount']) {
+            echo '
+             <script>
+                 alert("Caution, there is not enough '.$key.' to carry out the experiment, please check the stock");
+                 window.location = "experiments.php";
+             </script>
+            ';
+            exit();
+          };
+
           $units="SELECT units FROM reactives WHERE name ='$key'";
           $zz=mysqli_query($connection,$units);
           $uwu2=mysqli_fetch_assoc($zz);
           $count=$count+1;
+
+
           if ($count >= 3){
             if ($row[$key]<>0){
               echo '<div id="main"><div>The amount of ';
