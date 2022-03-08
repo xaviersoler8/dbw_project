@@ -16,7 +16,7 @@ MySQL
 # To do list  
 - APP  
   - WARNING  
-  - CALENDAR?  
+  - CALENDAR: tipo de letra q es diferente  :/ 
 - INDEX  
   - CARRUSEL
   - GITHUB  
@@ -24,3 +24,6 @@ MySQL
   - CORREO PROFE  
   - CREAR DB  
   - SUBIR CARPETA  
+- ELIMINAR:
+  - tablas de bd que sobran
+  - archivos que sobran
