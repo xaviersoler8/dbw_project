@@ -29,6 +29,14 @@
 		<input type="text" id="login" class="fadeIn second"  placeholder="User" name="user">
         <input type="password" id="password" class="fadeIn third" placeholder="Password" name="pass">
 		<input type="submit" class="fadeIn fourth" value="Register" name = "register">
+		<div id="formFooter">
+	<a href = "index.html"><buttom type = "buttom" class = "btn btn-outline-secondary btn-lg" style="background-color:grey; color:white ">MyLab Web</buttom></a>
+	<style>
+	.btn-outline-secondary:hover {
+  background-color: #c0a8a1 !important;
+}
+	</style>
+</div>
 	  </form>
 	</div>
   </div>

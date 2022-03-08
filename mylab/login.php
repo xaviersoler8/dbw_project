@@ -24,6 +24,10 @@
 </head>
 
 <body>
+
+
+
+
 <div class="wrapper fadeInDown">
 	<div id="formContent">
 	  <!-- Icon -->
@@ -48,10 +52,13 @@
 	.btn-outline-secondary:hover {
   background-color: #c0a8a1 !important;
 }
-</style>
+	</style>
 </div>
 
   
 	</div>
   </div>
+</div>
 </body>
+
+</html>
