@@ -68,7 +68,7 @@ document.getElementById('if').contentWindow.scrollTo(10,999999);
     <!-- calendar -->
     <div class="col-sm-2 col-xs-12 col-md-1">
       <li class="nav-item">
-          <a class="nav-link" href="calendar-04/calendar.php"><img width=30 src ="img/cal_icon.png"></a>
+          <a class="nav-link" href="calendar/index.php"><img width=30 src ="img/cal_icon.png"></a>
         </li>
     </div>
     <!-- chat -->
