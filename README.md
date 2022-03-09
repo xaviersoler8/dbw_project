@@ -23,6 +23,16 @@ you can choose if you want to just see the protocol on the screen, or if you wan
 all the form in order to get access to the protocol description, other wise you will recive a warning. In addition, if there are not enough quantity of 
 reactives to perform the protocol, the APP will give you a special warning with this information.
 
+-STOCK: Here you can find as a list all the materials that you have in your laboratory with the remaining quantities. For each one, there is also a warning
+icon that tells you if you need to buy more reactives soon! In this section, all the experiments that you previously submitted to the experiments section will automatically subtract the amount of each reactive used. This way, you can keep track of all lab materials.
+
+-CALENDAR: In this section you can first visualize a calendar in order to organize your work. You can add a new event, edit an event or delete it! You can also choose the option to see the whole month, only one week or a specific day. Then, you can see what appointments are set with all the information required. 
+You can also see al the event assigned in a table below, ordered by date. This can be useful in order to set all the lab meetings, presentations, deadlines, and even the tasks if you want!
+
+-CHAT: This section allows you to be connected to your team and functions as a current chat. All messages will be saved, and it is designed to talk about the things related on the lab work, so you will be 24/7 informed on everything that is going on in the lab.
+    
+-PROFILE: This section allows you to log out. See you soon!
+
 
 
 # SOFTWARE
