@@ -117,7 +117,7 @@
     $valor_restar="SELECT * FROM protocols WHERE type='$type' AND user='$user'";
     $x = mysqli_query($connection,$valor_restar);
     $row = mysqli_fetch_assoc($x);
-    if (mysqli_num_rows($user) == 0) {
+    if (empty($row)) {
       echo '
       <script>
           alert("User protocols not saved yet. Please, choose another user to give a correct protocol feedback.");
@@ -125,9 +125,8 @@
       </script>
       ';
     }
-
-
   ?>
+
   <div id="printableArea">
   <h1>
     <br>
