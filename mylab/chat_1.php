@@ -115,7 +115,7 @@ function gotoBottom(id){
 
 <?php
 
-$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" ); #igual hai q cambiar esto
+$connection = mysqli_connect("localhost", "mylab", "dbmylab", "mylab" ); #igual hai q cambiar esto
 
 if (isset($_POST["textchat"])) {
   $user1=$_SESSION['user'];

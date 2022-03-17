@@ -38,7 +38,7 @@
 <?php
 
 
-$connection = mysqli_connect("localhost", "mylab", "dbmylab", "login_register_db" );
+$connection = mysqli_connect("localhost", "mylab", "dbmylab", "mylab" );
 $sql = "SELECT * FROM xat";
 $result=mysqli_query($connection,$sql);
 
