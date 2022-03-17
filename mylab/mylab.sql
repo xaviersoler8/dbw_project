@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `eventos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `eventos` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(225) COLLATE utf32_spanish_ci NOT NULL,
-  `color` varchar(7) COLLATE utf32_spanish_ci DEFAULT NULL,
+  `title` varchar(225) CHARACTER SET utf32 COLLATE utf32_spanish_ci NOT NULL,
+  `color` varchar(7) CHARACTER SET utf32 COLLATE utf32_spanish_ci DEFAULT NULL,
   `start` datetime NOT NULL,
   `end` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -40,7 +40,6 @@ CREATE TABLE `eventos` (
 
 LOCK TABLES `eventos` WRITE;
 /*!40000 ALTER TABLE `eventos` DISABLE KEYS */;
-INSERT INTO `eventos` VALUES (1,'proba','#FF8C00','2022-03-07 00:00:00','2022-03-08 00:00:00'),(2,'yas queen','#159E4A','2022-03-14 00:00:00','2022-03-15 00:00:00'),(3,'buenooo','','2022-02-27 00:00:00','2022-02-28 00:00:00'),(4,'ola','#000','2022-03-23 00:00:00','2022-03-24 00:00:00'),(5,'Ola,','','2022-03-21 00:00:00','2022-03-22 00:00:00');
 /*!40000 ALTER TABLE `eventos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +100,7 @@ CREATE TABLE `reactives` (
 
 LOCK TABLES `reactives` WRITE;
 /*!40000 ALTER TABLE `reactives` DISABLE KEYS */;
-INSERT INTO `reactives` VALUES (1,'mastermix',6450,'μL',3000),(2,'oligos',0,'μL',10),(3,'miliQ',5996,'μL',2000),(4,'template',343,'μL',50),(5,'lysisbuffer',45250,'μL',10000),(6,'neutrbuffer',68350,'μL',15000),(7,'washbuffer',0,'mL',20),(8,'resusbuffer',97100,'μL',20000);
+INSERT INTO `reactives` VALUES (1,'mastermix',6450,'μL',3000),(2,'oligos',20,'μL',10),(3,'miliQ',5996,'μL',2000),(4,'template',343,'μL',50),(5,'lysisbuffer',45250,'μL',10000),(6,'neutrbuffer',68350,'μL',15000),(7,'washbuffer',30,'mL',20),(8,'resusbuffer',97100,'μL',20000);
 /*!40000 ALTER TABLE `reactives` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -153,7 +152,6 @@ CREATE TABLE `xat` (
 
 LOCK TABLES `xat` WRITE;
 /*!40000 ALTER TABLE `xat` DISABLE KEYS */;
-INSERT INTO `xat` VALUES (67,'xavi','jjjj'),(68,'xavi','jjjj'),(69,'mylab','molt be'),(70,'mylab','un 10'),(71,'mylab','un 10');
 /*!40000 ALTER TABLE `xat` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -166,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-17 21:37:07
+-- Dump completed on 2022-03-17 23:18:41
