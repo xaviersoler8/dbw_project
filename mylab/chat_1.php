@@ -146,7 +146,7 @@ if (isset($_POST["textchat"])) {
 	  <!--footer -->
 
 <!--footer -->
-<div style="position:absolute; bottom:33px; width: 100%; height: 80px;">
+<div style="position:relative; bottom:33px; width: 100%; height: 80px;">
 <hr >
 <footer class="row align-items-center" style="width: 100%; height: 80px;background-color:#6c757d">
 <div class="col text-center font-weight-dark">
