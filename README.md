@@ -28,7 +28,7 @@ you can choose if you want to just see the protocol on the screen, or if you wan
 - PROFILE: This section allows you to log out. See you soon!
 
 # LIMITATIONS  
-It would be a good idea to implement an admin user to organize the APP. However, we have a lot of assignments (as you can see in the Calendar ;)) and we coul have not reached all.  
+It would be a good idea to implement an admin user to organize the APP. However, we have a lot of assignments (as you can see in the Calendar ;)) and we could not reached all.  
 
 # SOFTWARE
 PHP
