@@ -37,11 +37,5 @@ CSS
 
 MySQL
 
-# To do list  
-- INDEX  
-  - GITHUB  
-- SERVIDOR:  
-  - CORREO PROFE  
-  - CREAR DB  
-  - SUBIR CARPETA  
+Java
 
